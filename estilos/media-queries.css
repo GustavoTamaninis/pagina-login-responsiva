@@ -3,13 +3,13 @@
 /* depois altere para EM. */
 
 :root{
-    --cor01: #53aaa7;
-    --cor02:#5F2C82;
+    --cor02: #53aaa7;
+    --roxo-base: #5F2C82;
 }
 
 @media screen and (min-width: 600px) and (max-width: 992px){ /* ou até 1024 - faça os testes. */
     body{
-        background-image: linear-gradient(to top, var(--cor01), var(--cor02));
+        background-image: linear-gradient(to top, var(--cor02), var(--roxo-base));
     }
     section#login{
         width: 80vw;
@@ -34,7 +34,7 @@
 
 @media screen and (min-width:993px){
     body{
-        background-image: linear-gradient(to top, var(--cor01), var(--cor02));
+        background-image: linear-gradient(to top, var(--cor02), var(--roxo-base));
     }
     section#login{
         width: 950px;
