@@ -1,4 +1,5 @@
 formulario = document.querySelector('#formulario');
+
 cxEmail = document.querySelector('#email');
 cxSenha = document.querySelector('#senha');
 cxErroEmail = document.querySelector('#erro-email')
@@ -10,7 +11,6 @@ cxEmail.addEventListener('focusout', function(e){
 
 cxSenha.addEventListener('focusout', function(e){
     validarSenha();
-    
 })
 
 function validarEmail(){
