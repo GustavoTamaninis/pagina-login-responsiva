@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media-queries.css">
+    <link rel="shortcut icon" href="imagens/favicon.svg" type="image/x-icon">
 </head>
 <body>
     <main>
@@ -25,12 +26,18 @@
                         <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required maxlength="40">
                         <label for="email">E-mail</label>
                     </div>
+                    <div id="erro-email">
+                        <p>O e-mail é obrigatório</p>
+                    </div>
                     <div class="campo">
                         <span class="material-symbols-outlined">
                             key
                         </span>
-                        <input type="password" name="password" id="password" placeholder="Digite sua senha" autocomplete="current-password"  required minlength="8" maxlength="16">
-                        <label for="password">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="current-password"  required minlength="8" maxlength="16">
+                        <label for="senha">Senha</label>
+                    </div>
+                    <div id="erro-senha">
+                        <p>A senha é obrigatória.</p>
                     </div>
                     <input type="submit" value="Entrar" id="entrar">
                     <button id="recuperar-senha">Esqueci a senha <span class="material-symbols-outlined">mail</span></button>
@@ -38,5 +45,6 @@
             </div>
         </section>
     </main>
+    <script src="codigos/validaForm.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     --cor02: #53aaa7;
     --cor03: #2D6462;
     --cor04: #94cfcd;
+    --alerta: rgb(249, 133, 25);
     --roxo-base: #5F2C82;
 }
 
@@ -35,7 +36,7 @@ section#login{
     overflow: hidden;
     margin: auto;
     width: 250px;
-    height: 515px;
+    height: 525px;
     background-color: var(--cor00);
     border-radius: 20px;
 
@@ -105,6 +106,18 @@ form > div.campo >input:focus-within{
     border: none;
 }
 
+form > div#erro-email{
+    display: none;
+    background-color: var(--alerta);
+    padding: 2px;
+}
+
+form > div#erro-senha{
+    display: none;
+    background-color: var(--alerta);
+    padding: 2px;
+}
+
 form > input[type=submit]{
     display: block;
     font-size: 1em;
@@ -131,7 +144,6 @@ form > button{
     border-radius: 7px;
     background-color: var(--cor00);
     color: var(--cor03);
-    margin: 5px 0px
 }
 
 form > button:hover{
@@ -144,46 +156,3 @@ form > button > span.material-symbols-outlined{
     transform: translatey(2px);
 }
 
-/*
-div.campo{
-    display: block;
-    width: 100%;
-    height: 40px;
-    background-color: var(--roxo-base);
-    border-radius: 8px;
-    margin: 5px 0;
-}
-
-div.campo > span{
-    color: white;
-    font-size: 1.9em;
-}
-
-div.campo input{
-    background-color: var(--cor01);
-    width: 85%;
-    height: 20px;
-    border-radius: 10px;
-}
-
-#botoes input{
-    display: inline-block;
-    width: 100%;
-    padding: 5px;
-    margin: 2px;
-}
-
-#entrar{
-    color: var(--cor00);
-    background-color: var(--cor02);
-}
-
-#entrar:hover{
-    background-color: var(--cor03);
-}
-
-#recuperar-senha{
-
-}
-
-*/
