@@ -12,9 +12,7 @@
 <body>
     <main>
         <section id="login">
-            <div id="imagem">
-
-            </div>
+            <div id="imagem"></div>
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar a sua conta.</p>
@@ -26,8 +24,11 @@
                         <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required maxlength="40">
                         <label for="email">E-mail</label>
                     </div>
-                    <div id="erro-email">
+                    <div id="email-vazio">
                         <p>O e-mail é obrigatório.</p>
+                    </div>
+                    <div id="email-invalido">
+                        <p>O e-mail informado é inválido</p>
                     </div>
                     <div class="campo">
                         <span class="material-symbols-outlined">
@@ -36,8 +37,11 @@
                         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="current-password"  required minlength="8" maxlength="16">
                         <label for="senha">Senha</label>
                     </div>
-                    <div id="erro-senha">
+                    <div id="senha-vazia">
                         <p>A senha é obrigatória.</p>
+                    </div>
+                    <div id="senha-invalida">
+                        <p>A senha precisa ter no mínimo 8 caracteres.</p>
                     </div>
                     <input type="submit" value="Entrar" id="entrar">
                     <button id="recuperar-senha">Esqueci a senha <span class="material-symbols-outlined">mail</span></button>

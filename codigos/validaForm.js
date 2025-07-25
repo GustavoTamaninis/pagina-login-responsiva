@@ -1,32 +1,60 @@
-formulario = document.querySelector('#formulario');
-
 cxEmail = document.querySelector('#email');
 cxSenha = document.querySelector('#senha');
-cxErroEmail = document.querySelector('#erro-email')
-cxErroSenha = document.querySelector('#erro-senha');
+
+cxEmailVazio = document.querySelector('#email-vazio');
+cxEmailInvalido = document.querySelector('#email-invalido');
+cxSenhaVazia = document.querySelector('#senha-vazia');
+cxSenhaInvalida = document.querySelector('#senha-invalida');
 
 cxEmail.addEventListener('focusout', function(e){
-    validarEmail();
+    valEmail();
 })
 
 cxSenha.addEventListener('focusout', function(e){
-    validarSenha();
+    valSenha();
 })
 
-function validarEmail(){
-    email = cxEmail.value;
-    cxErroEmail.style.display = validarCampoVazio(email);
+function valEmail(){
+    let email = cxEmail.value;
+    cxEmailVazio.style.display = valCampoVazio(email);
+    if(valCampoVazio(email) == 'block'){
+        cxEmailInvalido.style.display = "none";
+    }else{
+        cxEmailInvalido.style.display = valFormatEmail(email);
+    }
 }
 
-function validarSenha(){
-    senha = cxSenha.value;
-    cxErroSenha.style.display = validarCampoVazio(senha);
+function valSenha(){
+    let senha = cxSenha.value;
+    cxSenhaVazia.style.display = valCampoVazio(senha);
+    if(valCampoVazio(senha) == 'block'){
+        cxSenhaInvalida.style.display = 'none';
+    }else{
+        cxSenhaInvalida.style.display = valFormatSenha(senha);
+    }
 }
 
-function validarCampoVazio(campo){
+function valCampoVazio(campo){
     if(campo == ""){
         return "block";
     }else{
         return "none";
+    }
+}
+
+function valFormatEmail(email){
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(regex.test(email)){
+        return "none";
+    }else{
+        return "block";
+    }
+}
+
+function valFormatSenha(senha){
+    if(senha.length < 8){
+        return 'block';
+    }else{
+        return 'none';
     }
 }

@@ -13,7 +13,7 @@
     }
     section#login{
         width: 80vw;
-        height: 350px;
+        height: 360px;
     }
     section#login > div#imagem{
         float: left;
@@ -40,7 +40,7 @@
     }
     section#login{
         width: 950px;
-        height: 385px;
+        height: 400px;
     }
     section#login > div#imagem{
         float: right;

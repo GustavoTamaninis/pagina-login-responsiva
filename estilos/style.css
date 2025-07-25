@@ -36,7 +36,7 @@ section#login{
     overflow: hidden;
     margin: auto;
     width: 250px;
-    height: 525px;
+    height: 550px;
     background-color: var(--cor00);
     border-radius: 20px;
 
@@ -106,13 +106,25 @@ form > div.campo >input:focus-within{
     border: none;
 }
 
-form > div#erro-email{
+form > div#email-vazio{
     display: none;
     background-color: var(--alerta);
     padding: 2px;
 }
 
-form > div#erro-senha{
+form > div#email-invalido{
+    display: none;
+    background-color: var(--alerta);
+    padding: 2px;
+}
+
+form > div#senha-vazia{
+    display: none;
+    background-color: var(--alerta);
+    padding: 2px;
+}
+
+form > div#senha-invalida{
     display: none;
     background-color: var(--alerta);
     padding: 2px;
