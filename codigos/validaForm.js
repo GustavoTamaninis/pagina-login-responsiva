@@ -1,3 +1,6 @@
+cxEnvio = document.querySelector('#entrar');
+cxRecuperarSenha = document.querySelector('#recuperar-senha');
+
 cxEmail = document.querySelector('#email');
 cxSenha = document.querySelector('#senha');
 
@@ -5,6 +8,14 @@ cxEmailVazio = document.querySelector('#email-vazio');
 cxEmailInvalido = document.querySelector('#email-invalido');
 cxSenhaVazia = document.querySelector('#senha-vazia');
 cxSenhaInvalida = document.querySelector('#senha-invalida');
+
+cxEnvio.addEventListener('click', function(e){
+    e.preventDefault();
+})
+
+cxRecuperarSenha.addEventListener('click', function(e){
+    e.preventDefault();
+})
 
 cxEmail.addEventListener('focusout', function(e){
     valEmail();
